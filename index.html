@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <title>Numbers In JS</title>
+</head>
+<body>
+  <script>
+  let a = 10
+
+  console.log(100 + 99)
+
+  console.log(100 + 99 + 98 + 97 + 96 + 95)
+
+  console.log((4 + 6 + 9) / 77)
+
+  console.log(a)
+
+  console.log(a * 9)
+
+  let b = 7 * a
+  console.log(b)
+
+  let max = 57
+  actual = max - 13
+  percentage = actual/max
+
+  console.log(percentage)
+
+  let marksMissed = prompt("How many marks did you miss?")
+
+  if (marksMissed > 50){
+    console.log("This is too high")
+  } else{
+    percentage = (100 - (marksMissed * 2))
+    console.log("You scored "+percentage+"%")
+    if (percentage < 50){
+      console.log("You suck")
+    } else if (percentage > 51 && percentage < 75){
+      console.log("Average")
+    } else if (percentage > 76) {
+      console.log("Excellent!")
+    }
+  }
+
+  function add7(x) {
+    answer = x + 7;
+    return answer;
+  }
+
+  function multiply(x, y) {
+    answer = x * y;
+    return answer;
+  }
+
+  function capitalize(){
+    // asking for a string
+    submit = prompt("What do you want capitalized?");
+    //setting everything to lower case, seperating string in turn creating an array
+    lowercase = (submit.toLowerCase()).split('');
+    //declaring a variable that takes the first initial and capitalizes it
+    firstLetter = (lowercase[0].toString()).toUpperCase();
+    //remove the first entry from the original array
+    lowercase.shift();
+    //add the recreated/capitalized first entry
+    lowercase.unshift(firstLetter)
+    //turn array into a string
+    final = lowercase.join('');
+    //print string!
+    console.log(final);
+  }
+
+  function lastLetter(){
+    x = prompt("Take last letter of: ")
+    var list = x.split('');
+    var final = list.pop();
+    console.log(final);
+  }
+  </script>
+</body>
